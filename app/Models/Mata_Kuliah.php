@@ -25,6 +25,6 @@ class Mata_Kuliah extends Model
     }
 
     public function dosen(){
-        return $this->hasMany(Mata_Kuliah::class, 'dosen_matkul', 'mata_kuliah_id', 'dosen_id');
+        return $this->belongsToMany(Mata_Kuliah::class, 'dosen_matkul', 'mata_kuliah_id', 'dosen_id');
     }
 }

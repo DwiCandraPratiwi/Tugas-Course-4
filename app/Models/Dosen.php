@@ -23,7 +23,7 @@ class Dosen extends Model
     }
 
     public function mata_kuliah(){
-        return $this->hasMany(Mata_Kuliah::class, 'dosen_matkul', 'dosen_id', 'mata_kuliah_id');
+        return $this->belongsToMany(Mata_Kuliah::class, 'dosen_matkul', 'dosen_id', 'mata_kuliah_id');
     }
 
 }
